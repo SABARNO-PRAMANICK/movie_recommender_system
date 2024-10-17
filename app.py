@@ -13,7 +13,7 @@ option=st.selectbox(
 )
 similarity = pickle.load(open('similarity.pkl','rb'))
 def fetch_poster(movie_id):
-    response = requests.get('https://api.themoviedb.org/3/movie/{}?&append_to_response=videos&api_key=5f967e644ae194a27583a1fbf7419a18'.format(movie_id))
+    response = requests.get('https://api.themoviedb.org/3/movie/{}?&append_to_response=videos&api_key={paste_your_tmdb_api_key}'.format(movie_id))
     data = response.json()
     return "https://image.tmdb.org/t/p/w500" + data['poster_path']
 
